@@ -14,8 +14,10 @@ public class cicumference {
         circum = 2 * Math.PI * radius;
         area = Math.PI * Math.pow(radius, 2);
 
-        System.out.println("Cicumference of circle is "+ circum +"cm");
-        System.out.println("Area of circle is "+ area +"cm²");
+        // printf() is a method toformat output
+        // %.1f only take one decimal value
+        System.out.printf("\nCicumference of circle is %.1fcm", circum);
+        System.out.printf("\nArea of circle is %.1fcm²", area);
         scanner.close();
     }
 }
