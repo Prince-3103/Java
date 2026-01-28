@@ -19,7 +19,7 @@ public class shopingCart {
 
         prize = prize * quantity;
 
-        System.out.println("You have bought "+ quantity +" "+ food +"/s");
+        System.out.println("\nYou have bought "+ quantity +" "+ food +"/s");
         System.out.println("Your total is $"+ prize);
 
         input.close();
