@@ -14,6 +14,25 @@ public class slotMachine {
         System.out.println(" Symbols: 🎲 🍒 🍉 🍋 🏆 ");
         System.out.println("*************************");
 
+        while(balance > 0){
+            System.out.println("Current Balance: $"+ balance);
+            System.out.print("Enter the bet: ");
+            bet = scanner.nextInt();
+
+            if(bet > balance){
+                System.out.println("INSUFFICIENT FUNDS");
+                // continue;
+            }
+            else if(bet < 0){
+                System.out.println("Bet must be greater than 0");
+                // continue;
+            }
+            else{
+                balance -= bet;
+            }
+
+        }
+
         
         scanner.close();    
     }
