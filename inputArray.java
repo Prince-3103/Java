@@ -21,5 +21,6 @@ public class inputArray {
         for(String food : foods){
             System.out.print(food +" ");
         }
+        scanner.close();
     }
 }
