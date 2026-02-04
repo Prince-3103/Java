@@ -53,10 +53,8 @@ public class slotMachine {
                 System.out.println("Thanks for playing!!");
                 break;
             }
-
-
         }
-
+        System.out.println("Game over! Your Final Balance $"+balance);
         
         scanner.close();    
     }
