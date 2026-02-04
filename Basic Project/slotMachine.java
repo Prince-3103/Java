@@ -8,6 +8,7 @@ public class slotMachine {
         int bet;
         int payout;
         String[] row;
+        String playAgain;
 
         // Display Welcome msg
         System.out.println("*************************");
@@ -19,6 +20,7 @@ public class slotMachine {
             System.out.println("Current Balance: $"+ balance);
             System.out.print("Enter the bet: ");
             bet = scanner.nextInt();
+            scanner.nextLine();
 
             if(bet > balance){
                 System.out.println("INSUFFICIENT FUNDS");
@@ -44,6 +46,14 @@ public class slotMachine {
             else{
                 System.out.println("Sorry you lost this round.");
             }
+
+            System.out.print("Do you want to play again? (Y/N): ");
+            playAgain = scanner.nextLine().toUpperCase();
+            if(!playAgain.equals("Y")){
+                System.out.println("Thanks for playing!!");
+                break;
+            }
+
 
         }
 
