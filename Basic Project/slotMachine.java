@@ -33,6 +33,7 @@ public class slotMachine {
             }
             System.out.println("Spinning...");
             row = spinRow();
+            printRow(row);
 
         }
 
@@ -53,4 +54,9 @@ public class slotMachine {
         return row;
     }
     
+    static void printRow(String[] row){
+        System.out.println("**************");
+        System.out.println(" " + String.join(" | ", row));
+        System.out.println("**************");
+    }
 }
