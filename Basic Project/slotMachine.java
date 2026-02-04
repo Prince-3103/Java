@@ -35,6 +35,16 @@ public class slotMachine {
             row = spinRow();
             printRow(row);
 
+            payout = getPayout(row, bet);
+
+            if(payout > 0){
+                System.out.println("You won $"+ payout);
+                balance += payout;
+            }
+            else{
+                System.out.println("Sorry you lost this round.");
+            }
+
         }
 
         
@@ -59,4 +69,20 @@ public class slotMachine {
         System.out.println(" " + String.join(" | ", row));
         System.out.println("**************");
     }
+
+    static int getPayout(String[] row, int bet){
+        if(row[0].equals(row[1]) && row[1].equals(row[2])){
+
+            return switch(row[0]){
+                case "🍋" -> bet * 3;
+                case "🍒" -> bet * 4;
+                case "🍉" -> bet * 5;
+                case "🎲" -> bet * 10;
+                case "🏆" -> bet * 50;
+                default -> 0;
+            };
+        }
+        return 0;
+    }
+
 }
