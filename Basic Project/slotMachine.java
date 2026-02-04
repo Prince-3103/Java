@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class slotMachine {
@@ -30,11 +31,26 @@ public class slotMachine {
             else{
                 balance -= bet;
             }
+            System.out.println("Spinning...");
+            row = spinRow();
 
         }
 
         
         scanner.close();    
+    }
+
+    static String[] spinRow(){
+
+        String[] symbols = {"🎲", "🍒", "🍉", "🍋", "🏆"};
+        String[] row = new String[3];
+        
+        Random random = new Random();
+        for(int i = 0; i<3; i++){
+            row[i] = symbols[random.nextInt(symbols.length)];
+        }
+
+        return row;
     }
     
 }
