@@ -3,6 +3,7 @@ class book{
     String title;
     String author;
     int uniqueNum;
+    boolean isBorrowed;
 
     static{
         totalNoOfBooks = 0;
@@ -19,6 +20,20 @@ class book{
 
     book(int uniqueNum){    // Giving default value to title and author unique num important
         this(uniqueNum, "Unknown", "Unknown");
+    }
+
+    static int getTotalNoOfBooks(){
+        return totalNoOfBooks;
+    }
+
+    void borrowBook(){
+        if(isBorrowed){
+            System.out.println("Book is already borrowed");
+        }
+        else{
+            this.isBorrowed = true;
+            System.out.println("Enjoy your book");
+        }
     }
 }
 
