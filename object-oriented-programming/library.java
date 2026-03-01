@@ -1,4 +1,5 @@
 class book{
+    static int totalNoOfBooks;
     string tittle;
     string author;
     int uniqueNum;
