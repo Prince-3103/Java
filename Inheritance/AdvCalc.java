@@ -8,6 +8,6 @@ public class AdvCalc extends Calc{      // extends for inheritance takes all pro
         return a/b;
     }
     public AdvCalc(){
-        System.out.print("Run");
+        System.out.println("Run");
     }
 }
