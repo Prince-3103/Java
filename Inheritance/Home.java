@@ -7,11 +7,12 @@ package Inheritance;  // This is only for folder which is given by Vs code
 
 public class Home {
     public static void main(String[] args){
-        AdvCalc prob = new AdvCalc();
+        VeryAdvCalc prob = new VeryAdvCalc();
         int a = prob.product(3,7);
         int b = prob.add(4, 5);
         int c = prob.sub(5, 2);
         int d = prob.divide(18, 3);
-        System.out.println(a +" "+ b +" "+ c +" "+d);
+        double z = prob.power(2,4);
+        System.out.println(a +" "+ b +" "+ c +" "+ d +" "+ z);
     }
 }
