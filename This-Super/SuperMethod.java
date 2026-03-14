@@ -18,6 +18,14 @@ class B extends A{
 
 public class SuperMethod {
     public static void main(String[] args) {
-        B obj = new B();
+        // B obj = new B();  
+        // Output  
+        // In A
+        // In B
+
+        // B obj = new B(10);
+        // Output  
+        // In A.  // Why not giving this as int?????
+        // In B int
     }
 }
